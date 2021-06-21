@@ -43,7 +43,8 @@ services:
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./logstash/conf.d/:/usr/share/logstash/pipeline/
-      - ./Log/:/usr/share/logstash/Logs/
+      - ./logstash/patterns/:/etc/logstash/patterns/
+      - ./Log/:/usr/share/logstash/Log/
     networks:
       - elastic
   
